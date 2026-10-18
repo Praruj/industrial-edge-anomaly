@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+.pytest_cache/
+data/
+outputs/**/*.onnx
+outputs/**/*.npy
+outputs/**/*.npz
+*.egg-info/
+*.log

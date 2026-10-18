@@ -1,0 +1,156 @@
+{
+  "normal_fs": 48000,
+  "seen_loads": {
+    "n_train": 203,
+    "n_test": 1538,
+    "isolation_forest": {
+      "auroc": 1.0,
+      "threshold": 0.5201755428089839,
+      "false_alarm_rate": 0.007936507936507936,
+      "detection_rate": {
+        "ball": 1.0,
+        "inner_race": 1.0,
+        "outer_race": 1.0
+      }
+    },
+    "autoencoder": {
+      "auroc_mean": 1.0,
+      "auroc_std": 0.0,
+      "seed0": {
+        "auroc": 1.0,
+        "threshold": 0.869684100151062,
+        "false_alarm_rate": 0.06349206349206349,
+        "detection_rate": {
+          "ball": 1.0,
+          "inner_race": 1.0,
+          "outer_race": 1.0
+        }
+      }
+    }
+  },
+  "unseen_load_3hp": {
+    "n_train": 145,
+    "n_test": 390,
+    "isolation_forest": {
+      "auroc": 1.0,
+      "threshold": 0.5445754803521078,
+      "false_alarm_rate": 0.9166666666666666,
+      "detection_rate": {
+        "ball": 1.0,
+        "inner_race": 1.0,
+        "outer_race": 1.0
+      }
+    },
+    "autoencoder": {
+      "auroc_mean": 1.0,
+      "auroc_std": 0.0,
+      "seed0": {
+        "auroc": 1.0,
+        "threshold": 1.0844407081604004,
+        "false_alarm_rate": 1.0,
+        "detection_rate": {
+          "ball": 1.0,
+          "inner_race": 1.0,
+          "outer_race": 1.0
+        }
+      }
+    },
+    "recalibrated_threshold": {
+      "healthy_clip_windows": 23,
+      "healthy_clip_seconds": 2.0,
+      "isolation_forest": {
+        "auroc": 1.0,
+        "threshold": 0.5945405416330084,
+        "false_alarm_rate": 0.05555555555555555,
+        "detection_rate": {
+          "ball": 1.0,
+          "inner_race": 1.0,
+          "outer_race": 1.0
+        }
+      },
+      "autoencoder": {
+        "auroc": 1.0,
+        "threshold": 6.7117695808410645,
+        "false_alarm_rate": 0.027777777777777776,
+        "detection_rate": {
+          "ball": 1.0,
+          "inner_race": 1.0,
+          "outer_race": 1.0
+        }
+      }
+    }
+  },
+  "noise_sweep_snr_db": {
+    "10": {
+      "isolation_forest_auroc": 1.0,
+      "autoencoder_auroc_mean": 1.0,
+      "autoencoder_auroc_std": 0.0,
+      "autoencoder_detection": {
+        "ball": 1.0,
+        "inner_race": 1.0,
+        "outer_race": 1.0
+      },
+      "autoencoder_false_alarm": 0.03968253968253968
+    },
+    "0": {
+      "isolation_forest_auroc": 1.0,
+      "autoencoder_auroc_mean": 1.0,
+      "autoencoder_auroc_std": 0.0,
+      "autoencoder_detection": {
+        "ball": 1.0,
+        "inner_race": 1.0,
+        "outer_race": 1.0
+      },
+      "autoencoder_false_alarm": 0.03968253968253968
+    },
+    "-5": {
+      "isolation_forest_auroc": 0.9998988263860785,
+      "autoencoder_auroc_mean": 1.0,
+      "autoencoder_auroc_std": 0.0,
+      "autoencoder_detection": {
+        "ball": 1.0,
+        "inner_race": 1.0,
+        "outer_race": 1.0
+      },
+      "autoencoder_false_alarm": 0.015873015873015872
+    },
+    "-10": {
+      "isolation_forest_auroc": 0.9976730068798058,
+      "autoencoder_auroc_mean": 1.0,
+      "autoencoder_auroc_std": 0.0,
+      "autoencoder_detection": {
+        "ball": 1.0,
+        "inner_race": 1.0,
+        "outer_race": 1.0
+      },
+      "autoencoder_false_alarm": 0.015873015873015872
+    }
+  },
+  "edge": {
+    "device": {
+      "cpu": "Intel64 Family 6 Model 142 Stepping 9, GenuineIntel",
+      "os": "Windows-10-10.0.19045-SP0",
+      "onnxruntime": "1.20.1",
+      "threads": 1,
+      "note": "Laptop CPU limited to one thread as a stand-in for an edge device."
+    },
+    "fp32": {
+      "size_kb": 19.243,
+      "auroc": 1.0,
+      "p50_ms": 0.03099999958067201,
+      "p95_ms": 0.041009999358720954
+    },
+    "int8": {
+      "size_kb": 10.94,
+      "auroc": 1.0,
+      "p50_ms": 0.043000000005122274,
+      "p95_ms": 0.06663500053036839
+    },
+    "window_seconds": 0.17066666666666666,
+    "note": "Latency covers the model only; feature extraction is timed separately.",
+    "feature_extraction": {
+      "p50_ms": 2.17930000007982,
+      "p95_ms": 3.4678499997426107
+    }
+  }
+}
